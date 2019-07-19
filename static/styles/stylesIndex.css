@@ -1,0 +1,74 @@
+@font-face {
+font-family: 'MavenPro';
+src: url(MavenPro/MavenProReg.ttf);
+
+}
+
+@font-face {
+font-family: 'SF-Pro';
+src: url(sf-pro-display_medium.ttf);
+
+}
+
+
+
+
+body{
+  margin: 0;
+  background-color: #0A0C15;
+
+}
+
+
+.title{
+  color: white;
+  font-family: 'SF-Pro', sans-serif;
+  width: 500px;
+  position: absolute;
+  left: 250px;
+  top: 100px;
+  letter-spacing: 2px;
+}
+
+.title p {
+opacity: 0.5;
+}
+
+.side-nav{
+  position: absolute;
+
+  left: 0px;
+  top: 0px;
+  /* background-color: #fbfcfd; */
+  height: 100%;
+  width: 190px;
+  border-right: 1px solid #3B4553;
+}
+
+.updates{
+
+  position: absolute;
+  left: 250px;
+  top: 350px;
+  color: white;
+  width: 600px;
+}
+
+.updateList{
+  width: 100%;
+  background-color: red;
+  height: 30px;
+  margin-left: 25px;
+
+
+}
+
+.updateList:hover{
+  background-color: white;
+  color: black;
+}
+
+ul#job li{
+  display: inline;
+  margin-left: -10px;
+}

@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+  <title>
+  Droplet.
+  </title>
+
+<link rel="stylesheet" href="static/styles/styles.css" />
+
+
+
+
+</head>
+
+
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+
+<!-- <svg class="onOff" width="300px" height="300px" >
+  <g id="A">
+    <path class="s" id="D" d="M202.5,239.4h-23.1c-6.6,0-12-5.4-12-12v0c0-6.6,5.4-12,12-12h23.1c6.6,0,12,5.4,12,12v0
+      C214.5,234,209.1,239.4,202.5,239.4z"/>
+  </g>
+  <g id="B">
+    <circle class="st" cx="202.6" cy="227.4" r="4.7"/>
+    <rect x="180.1" y="222.7" class="st1" width="1" height="9.4"/>
+  </g>
+  <g id="C">
+    <circle class="sty" cx="179.3" cy="227.4" r="11.9"/>
+  </g>
+</svg> -->
+
+
+<div class="nav">
+  <ul>
+    <li><button id="o"> Osip </button></li>
+    <li><button id="w"> William </button></li>
+    <li><button id="l"> <span> Lana </span> </button></li>
+    <li><button id="lo"> Louis </button></li>
+
+    <li><button id="s"> Sacha </button></li>
+    <li><button id="li"> Lilly </button></li>
+    <li><button id="leo"> Leopold </button></li>
+    <li><button id="f"> Finbar </button></li>
+    <li><button id="sy"> Sylvain </button></li>
+  </ul>
+
+</div>
+
+    <button class="addData">
+
+      add data
+    </button>
+
+
+
+<div class="display">
+<p > Map</p>
+
+        <div id="map"></div>
+
+
+
+                <svg width="1000px" height="1000px"  viewBox="70 -205 600 900" id="lana">
+
+                    <rect x="50" y="610" class="st0" width="730" height="43.4" id="rect" />
+
+                    <!-- BLUR FOR SVG ELEMETS
+                    COULD BE USEFUL FOR HEATMAP DATA ETC. -->
+
+                  <defs>
+                      <filter id="blur">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="1,1"></feGaussianBlur>
+                      </filter>
+                    </defs>
+
+
+
+                  <g id="rows" class="rows">
+
+
+
+                          </g>
+
+
+                                  <g id="SoilMoistureLana" class="soilMoistureLana">
+
+
+
+                                  </g>
+
+
+
+                </svg>
+
+
+</div>
+
+
+<div class="left">
+
+
+  <p>  </p>
+
+
+</br>
+</br>
+
+      <div class="l">
+      <!-- <a href="" > <img src="static/images/homeLink.png" width="60px" />
+         </a> -->
+
+
+        <p id="homeLink">
+          Home </p >
+
+
+      </div>
+
+      <div class="l">
+        <!-- <a href="" > <img src="static/images/mapLink.png" width="60px" />
+           </a> -->
+
+
+          <p id="mapLink">
+            map </p >
+
+      </div>
+
+      <div class="l">
+        <!-- <a href="" > <img src="static/images/jobsLink.png" width="60px" />
+           </a> -->
+
+
+          <p id="jobsLink">
+            Jobs </p >
+      </div>
+
+
+
+
+
+</div>
+
+
+      <div class="title">
+
+          <h2 class="lana"> Lana  -  SBL</h2>
+          <!-- <h3 class="typeVine">  </h3> -->
+
+      </div>
+
+
+
+
+
+<div class="buttons">
+
+
+<div class="list">
+
+
+
+  <div class="monthsTwo" id="MonthsTwo">
+  <h3 class="Mtitle"> Measurement </h3>
+
+
+      <div class="type">
+      <button onclick="soil()" id="Soil"> Soil Moisture   </button>
+      <!-- <img id="AddSM" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+    <div class="type">
+      <button onclick="" id="RF"> Rainfall </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+      <div class="type">
+      <button onclick="" id="humid"> Humidity </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+      <div class="type">
+      <button onclick="" id="Air"> Air Temp </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+      <div class="type">
+      <button id="Sun"> Sunshine hrs </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+      <div class="type">
+      <button id="Wind"> Wind </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+
+      <div class="type">
+      <button onclick="grow()" id="Growth"> Growth </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+
+      <div class="type">
+      <button onclick="disease()" id="Disease"> Disease </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+      <div class="type">
+      <button id="Spray"> Spray </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+
+      <div class="type">
+      <button  id="Irrigation"> Irrigation </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+      <div class="type">
+      <button onclick="brokenP()"  id="brokenPosts"> Broken Posts </button>
+        <!-- <img id="" class="addBTN" src="static/images/back.png" width="30px"> -->
+      </div>
+
+
+
+  </div>
+
+
+
+
+      <div class="months" >
+    <h3 class="t"> Monthly avg </h3>
+
+
+    <div id="days">
+
+
+          <div id="J" class="day">
+
+
+            <ul>
+
+          <h2 id="back"> <img src="static/images/back.png" width="30px">  </h2>
+          <!-- <h2> January </h2> -->
+          <!-- <button onclick="myFunction()" id="J1"> 1 </button> -->
+
+          <p id="J2"> 2 </p>
+          <p id="J3"> 3 </p>
+          <p id="J4"> 4 </p>
+          <p id="J5"> 5 </p>
+          <p id="J6"> 6 </p>
+          <p id="J7"> 7 </p>
+          <p id="J8"> 8 </p>
+          <p id="J9"> 9 </p>
+          <p id="J10">10</p>
+          <p id="J11">11</p>
+          <p id="J12">12</p>
+          <p id="J13">13</p>
+          <p id="J14">14</p>
+          <p id="J15">15</p>
+          <p id="J16">16</p>
+          <p id="J17">17</p>
+          <p id="J18">18</p>
+          <p id="J19">19</p>
+          <p id="J20">20</p>
+          <p id="J21">21</p>
+          <p id="J22">22</p>
+          <p id="J23">23</p>
+          <p id="J24">24</p>
+          <p id="J25">25</p>
+          <p id="J26">26</p>
+          <p id="J27">27</p>
+          <p id="J28">28</p>
+          <p id="J29">29</p>
+          <p id="J30">30</p>
+          <p id="J31">31</p>
+            </ul>
+          </div>
+
+
+
+          <div id="Fday" class="day">
+
+
+            <ul>
+
+          <h2 id="b2"> <img src="static/images/back.png" width="30px"> </h2>
+          <h2> February </h2>
+          <p id="F1"> 1 </p>
+          <p id="F2"> 2 </p>
+          <p id="F3"> 3 </p>
+          <p id="F4"> 4 </p>
+          <p id="F5"> 5 </p>
+          <p id="F6"> 6 </p>
+          <p id="F7"> 7 </p>
+          <p id="F8"> 8 </p>
+          <p id="F9"> 9 </p>
+          <p id="F10">10</p>
+          <p id="F11">11</p>
+          <p id="F12">12</p>
+          <p id="F13">13</p>
+          <p id="F14">14</p>
+          <p id="F15">15</p>
+          <p id="F16">16</p>
+          <p id="F17">17</p>
+          <p id="F18">18</p>
+          <p id="F19">19</p>
+          <p id="F20">20</p>
+          <p id="F21">21</p>
+          <p id="F22">22</p>
+          <p id="F23">23</p>
+          <p id="F24">24</p>
+          <p id="F25">25</p>
+          <p id="F26">26</p>
+          <p id="F27">27</p>
+          <p id="F28">28</p>
+
+            </ul>
+          </div>
+
+
+
+
+          <div id="Mday" class="day">
+
+
+            <ul>
+
+          <h2 id="b3"> <img src="static/images/back.png" width="30px"> </h2>
+          <h2> March </h2>
+          <p id="M1"> 1 </p>
+          <p id="M2"> 2 </p>
+          <p id="M3"> 3 </p>
+          <p id="M4"> 4 </p>
+          <p id="M5"> 5 </p>
+          <p id="M6"> 6 </p>
+          <p id="M7"> 7 </p>
+          <p id="M8"> 8 </p>
+          <p id="M9"> 9 </p>
+          <p id="M10">10</p>
+          <p id="M11">11</p>
+          <p id="M12">12</p>
+          <p id="M13">13</p>
+          <p id="M14">14</p>
+          <p id="M15">15</p>
+          <p id="M16">16</p>
+          <p id="M17">17</p>
+          <p id="M18">18</p>
+          <p id="M19">19</p>
+          <p id="M20">20</p>
+          <p id="M21">21</p>
+          <p id="M22">22</p>
+          <p id="M23">23</p>
+          <p id="M24">24</p>
+          <p id="M25">25</p>
+          <p id="M26">26</p>
+          <p id="M27">27</p>
+          <p id="M28">28</p>
+          <p id="M29">29</p>
+          <p id="M30">30</p>
+          <p id="M31">31</p>
+
+            </ul>
+          </div>
+
+
+
+
+
+
+
+          <div id="Apday" class="day">
+
+
+            <ul>
+
+          <h2 id="b4"> <img src="static/images/back.png" width="30px"> </h2>
+          <h2> April </h2>
+          <p id="Ap1"> 1 </p>
+          <p id="Ap2"> 2 </p>
+          <p id="Ap3"> 3 </p>
+          <p id="Ap4"> 4 </p>
+          <p id="Ap5"> 5 </p>
+          <p id="Ap6"> 6 </p>
+          <p id="Ap7"> 7 </p>
+          <p id="Ap8"> 8 </p>
+          <p id="Ap9"> 9 </p>
+          <p id="Ap10">10</p>
+          <p id="Ap11">11</p>
+          <p id="Ap12">12</p>
+          <p id="Ap13">13</p>
+          <p id="Ap14">14</p>
+          <p id="Ap15">15</p>
+          <p id="Ap16">16</p>
+          <p id="Ap17">17</p>
+          <p id="Ap18">18</p>
+          <p id="Ap19">19</p>
+          <p id="Ap20">20</p>
+          <p id="Ap21">21</p>
+          <p id="Ap22">22</p>
+          <p id="Ap23">23</p>
+          <p id="Ap24">24</p>
+          <p id="Ap25">25</p>
+          <p id="Ap26">26</p>
+          <p id="Ap27">27</p>
+          <p id="Ap28">28</p>
+          <p id="Ap29">29</p>
+          <p id="Ap30">30</p>
+
+
+            </ul>
+          </div>
+
+
+
+
+
+          <div id="Maday" class="day">
+
+
+            <ul>
+
+          <h2 id="b5"> <img src="static/images/back.png" width="30px"> </h2>
+          <h2> May </h2>
+          <p id="Ma1"> 1 </p>
+          <p id="Ma2"> 2 </p>
+          <p id="Ma3"> 3 </p>
+          <p id="Ma4"> 4 </p>
+          <p id="Ma5"> 5 </p>
+          <p id="Ma6"> 6 </p>
+          <p id="Ma7"> 7 </p>
+          <p id="Ma8"> 8 </p>
+          <p id="Ma9"> 9 </p>
+          <p id="Ma10">10</p>
+          <p id="Ma11">11</p>
+          <p id="Ma12">12</p>
+          <p id="Ma13">13</p>
+          <p id="Ma14">14</p>
+          <p id="Ma15">15</p>
+          <p id="Ma16">16</p>
+          <p id="Ma17">17</p>
+          <p id="Ma18">18</p>
+          <p id="Ma19">19</p>
+          <p id="Ma20">20</p>
+          <p id="Ma21">21</p>
+          <p id="Ma22">22</p>
+          <p id="Ma23">23</p>
+          <p id="Ma24">24</p>
+          <p id="Ma25">25</p>
+          <p id="Ma26">26</p>
+          <p id="Ma27">27</p>
+          <p id="Ma28">28</p>
+          <p id="Ma29">29</p>
+          <p id="Ma30">30</p>
+          <p id="Ma31">31</p>
+
+            </ul>
+          </div>
+
+
+
+          <div id="Junday" class="day">
+
+
+            <ul>
+
+          <h2 id="b6"> <img src="static/images/back.png" width="30px"> </h2>
+          <h2> June </h2>
+          <p id="Jun1"> 1 </p>
+          <p id="Jun2"> 2 </p>
+          <p id="Jun3"> 3 </p>
+          <p id="Jun4"> 4 </p>
+          <p id="Jun5"> 5 </p>
+          <p id="Jun6"> 6 </p>
+          <p id="Jun7"> 7 </p>
+          <p id="Jun8"> 8 </p>
+          <p id="Jun9"> 9 </p>
+          <p id="Jun10">10</p>
+          <p id="Jun11">11</p>
+          <p id="Jun12">12</p>
+          <p id="Jun13">13</p>
+          <p id="Jun14">14</p>
+          <p id="Jun15">15</p>
+          <p id="Jun16">16</p>
+          <p id="Jun17">17</p>
+          <p id="Jun18">18</p>
+          <p id="Jun19">19</p>
+          <p id="Jun20">20</p>
+          <p id="Jun21">21</p>
+          <p id="Jun22">22</p>
+          <p id="Jun23">23</p>
+          <p id="Jun24">24</p>
+          <p id="Jun25">25</p>
+          <p id="Jun26">26</p>
+          <p id="Jun27">27</p>
+          <p id="Jun28">28</p>
+          <p id="Jun29">29</p>
+          <p id="Jun30">30</p>
+          <p id="Jun31">31</p>
+
+            </ul>
+          </div>
+
+
+
+
+
+          <div id="Julday" class="day">
+
+
+            <ul>
+
+          <h2 id="b7"> <img src="static/images/back.png" width="30px"> </h2>
+          <h2> July </h2>
+          <p id="Jul1"> 1 </p>
+          <p id="Jul2"> 2 </p>
+          <p id="Jul3"> 3 </p>
+          <p id="Jul4"> 4 </p>
+          <p id="Jul5"> 5 </p>
+          <p id="Jul6"> 6 </p>
+          <p id="Jul7"> 7 </p>
+          <p id="Jul8"> 8 </p>
+          <p id="Jul9"> 9 </p>
+          <p id="Jul10">10</p>
+          <p id="Jul11">11</p>
+          <p id="Jul12">12</p>
+          <p id="Jul13">13</p>
+          <p id="Jul14">14</p>
+          <p id="Jul15">15</p>
+          <p id="Jul16">16</p>
+          <p id="Jul17">17</p>
+          <p id="Jul18">18</p>
+          <p id="Jul19">19</p>
+          <p id="Jul20">20</p>
+          <p id="Jul21">21</p>
+          <p id="Jul22">22</p>
+          <p id="Jul23">23</p>
+          <p id="Jul24">24</p>
+          <p id="Jul25">25</p>
+          <p id="Jul26">26</p>
+          <p id="Jul27">27</p>
+          <p id="Jul28">28</p>
+          <p id="Jul29">29</p>
+          <p id="Jul30">30</p>
+          <!-- <p id="Jul31">31</p> -->
+
+            </ul>
+          </div>
+
+
+                <div id="Auday" class="day">
+
+
+                  <ul>
+
+                <h2 id="b8"> <img src="static/images/back.png" width="30px"> </h2>
+                <h2> August </h2>
+                <p id="Au1"> 1 </p>
+                <p id="Au2"> 2 </p>
+                <p id="Au3"> 3 </p>
+                <p id="Au4"> 4 </p>
+                <p id="Au5"> 5 </p>
+                <p id="Au6"> 6 </p>
+                <p id="Au7"> 7 </p>
+                <p id="Au8"> 8 </p>
+                <p id="Au9"> 9 </p>
+                <p id="Au10">10</p>
+                <p id="Au11">11</p>
+                <p id="Au12">12</p>
+                <p id="Au13">13</p>
+                <p id="Au14">14</p>
+                <p id="Au15">15</p>
+                <p id="Au16">16</p>
+                <p id="Au17">17</p>
+                <p id="Au18">18</p>
+                <p id="Au19">19</p>
+                <p id="Au20">20</p>
+                <p id="Au21">21</p>
+                <p id="Au22">22</p>
+                <p id="Au23">23</p>
+                <p id="Au24">24</p>
+                <p id="Au25">25</p>
+                <p id="Au26">26</p>
+                <p id="Au27">27</p>
+                <p id="Au28">28</p>
+                <p id="Au29">29</p>
+                <p id="Au30">30</p>
+                <p id="Au31">31</p>
+
+                  </ul>
+                </div>
+
+
+                <div id="Sday" class="day">
+
+
+                  <ul>
+
+                <h2 id="b9"> <img src="static/images/back.png" width="30px"> </h2>
+                <h2> September </h2>
+                <p id="S1"> 1 </p>
+                <p id="S2"> 2 </p>
+                <p id="S3"> 3 </p>
+                <p id="S4"> 4 </p>
+                <p id="S5"> 5 </p>
+                <p id="S6"> 6 </p>
+                <p id="S7"> 7 </p>
+                <p id="S8"> 8 </p>
+                <p id="S9"> 9 </p>
+                <p id="S10">10</p>
+                <p id="S11">11</p>
+                <p id="S12">12</p>
+                <p id="S13">13</p>
+                <p id="S14">14</p>
+                <p id="S15">15</p>
+                <p id="S16">16</p>
+                <p id="S17">17</p>
+                <p id="S18">18</p>
+                <p id="S19">19</p>
+                <p id="S20">20</p>
+                <p id="S21">21</p>
+                <p id="S22">22</p>
+                <p id="S23">23</p>
+                <p id="S24">24</p>
+                <p id="S25">25</p>
+                <p id="S26">26</p>
+                <p id="S27">27</p>
+                <p id="S28">28</p>
+                <p id="S29">29</p>
+                <p id="S30">30</p>
+                <!-- <p id="S31">31</p> -->
+
+                  </ul>
+                </div>
+
+
+
+                <div id="Oday" class="day">
+
+
+                  <ul>
+
+                <h2 id="b10"> <img src="static/images/back.png" width="30px"> </h2>
+                <h2> October </h2>
+                <p id="O1"> 1 </p>
+                <p id="O2"> 2 </p>
+                <p id="O3"> 3 </p>
+                <p id="O4"> 4 </p>
+                <p id="O5"> 5 </p>
+                <p id="O6"> 6 </p>
+                <p id="O7"> 7 </p>
+                <p id="O8"> 8 </p>
+                <p id="O9"> 9 </p>
+                <p id="O10">10</p>
+                <p id="O11">11</p>
+                <p id="O12">12</p>
+                <p id="O13">13</p>
+                <p id="O14">14</p>
+                <p id="O15">15</p>
+                <p id="O16">16</p>
+                <p id="O17">17</p>
+                <p id="O18">18</p>
+                <p id="O19">19</p>
+                <p id="O20">20</p>
+                <p id="O21">21</p>
+                <p id="O22">22</p>
+                <p id="O23">23</p>
+                <p id="O24">24</p>
+                <p id="O25">25</p>
+                <p id="O26">26</p>
+                <p id="O27">27</p>
+                <p id="O28">28</p>
+                <p id="O29">29</p>
+                <p id="O30">30</p>
+                <p id="O31">31</p>
+
+                  </ul>
+                </div>
+
+
+
+
+                <div id="Nday" class="day">
+
+
+                  <ul>
+
+                <h2 id="b11"> <img src="static/images/back.png" width="30px"> </h2>
+                <h2> November </h2>
+                <p id="N1"> 1 </p>
+                <p id="N2"> 2 </p>
+                <p id="N3"> 3 </p>
+                <p id="N4"> 4 </p>
+                <p id="N5"> 5 </p>
+                <p id="N6"> 6 </p>
+                <p id="N7"> 7 </p>
+                <p id="N8"> 8 </p>
+                <p id="N9"> 9 </p>
+                <p id="N10">10</p>
+                <p id="N11">11</p>
+                <p id="N12">12</p>
+                <p id="N13">13</p>
+                <p id="N14">14</p>
+                <p id="N15">15</p>
+                <p id="N16">16</p>
+                <p id="N17">17</p>
+                <p id="N18">18</p>
+                <p id="N19">19</p>
+                <p id="N20">20</p>
+                <p id="N21">21</p>
+                <p id="N22">22</p>
+                <p id="N23">23</p>
+                <p id="N24">24</p>
+                <p id="N25">25</p>
+                <p id="N26">26</p>
+                <p id="N27">27</p>
+                <p id="N28">28</p>
+                <p id="N29">29</p>
+                <p id="N30">30</p>
+                <!-- <p id="O31">31</p> -->
+
+                  </ul>
+                </div>
+
+
+                <div id="Dday" class="day">
+
+
+                  <ul>
+
+                <h2 id="b12"> <img src="static/images/back.png" width="30px"> </h2>
+                <h2> December </h2>
+                <p id="D1"> 1 </p>
+                <p id="D2"> 2 </p>
+                <p id="D3"> 3 </p>
+                <p id="D4"> 4 </p>
+                <p id="D5"> 5 </p>
+                <p id="D6"> 6 </p>
+                <p id="D7"> 7 </p>
+                <p id="D8"> 8 </p>
+                <p id="D9"> 9 </p>
+                <p id="D10">10</p>
+                <p id="D11">11</p>
+                <p id="D12">12</p>
+                <p id="D13">13</p>
+                <p id="D14">14</p>
+                <p id="D15">15</p>
+                <p id="D16">16</p>
+                <p id="D17">17</p>
+                <p id="D18">18</p>
+                <p id="D19">19</p>
+                <p id="D20">20</p>
+                <p id="D21">21</p>
+                <p id="D22">22</p>
+                <p id="D23">23</p>
+                <p id="D24">24</p>
+                <p id="D25">25</p>
+                <p id="D26">26</p>
+                <p id="D27">27</p>
+                <p id="D28">28</p>
+                <p id="D29">29</p>
+                <p id="D30">30</p>
+                <p id="D31">31</p>
+
+                  </ul>
+                </div>
+
+
+
+    </div>
+
+
+
+          <div id="months">
+            <div id="year">
+          <button onclick="moveMonths" id="Jan"> Jan </button>
+          <button  id="Feb"> Feb </button>
+          <button id="Mar"> Mar </button>
+          <button id="Ap"> Apr </button>
+          <button id="M"> May </button>
+          <button id="Jun"> Jun </button>
+        </div>
+
+              <div  id="halfYear">
+
+                <div class="h">
+                  <button  id="Jul"> Jul </button>
+                  <button  id="Aug"> Aug </button>
+                  <button id="Sep"> Sep </button>
+                  <button id="Oct"> Oct </button>
+                  <button id="Nov"> Nov </button>
+                  <button id="Dec"> Dec </button>
+                </div>
+                    </div>
+
+
+
+
+
+            </div>
+
+
+
+
+            <div id="months">
+              <div id="year">
+
+                            <button id="Year"> Year </button>
+                            <button id=""> 2017 </button>
+                            <button id=""> 2018 </button>
+          </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+      <!-- <div class="monthsTwo" >
+          <h2 > Valves </h2>
+
+          <p id="Valve1"> V 1 </p>
+          <p id="Valve2"> V 2 </p>
+          <p id="Valve3"> V 3  </p>
+          <p id="block"> Block </p>
+
+
+      </div> -->
+
+
+<!-- <p id="Live" > Live </p> -->
+  </div>
+</div>
+
+
+    <!-- <button onclick="myFunction()" id="b">Try it</button> -->
+
+
+
+
+<!-- Showing location -->
+
+
+
+
+
+
+
+
+
+<!-- SoilMoisture Form-->
+
+<div class="form" >
+
+  <form action="/addSoilMoisture" method="post" id="SMo">
+    <img id="backBTN" src="static/images/back.png" width="30px">
+    <h3> Soil Moiture </h3>
+    <p> Day </p>
+    <input  id="day" name="day" required />
+      <p> Month </p>
+    <input  id="month" name="month" required />
+  <p> Year </p>
+    <input  id="year" name="year" required />
+
+
+
+    <p> Vineyard </p>
+    <input id="Vineyard" name="Vineyard" required />
+
+    <p> Block </p>
+    <input id="block" name="block" required />
+
+    <p> Measurement </p>
+    <input id="amount" name="amount" required />
+
+    <p> Row </p>
+    <p id="r"> </p>
+    <p><button id="currentLocation" onclick="geoFindMe()"> Current location</button></p>
+    <p><button id="inputRow" onclick="geoFindMe()"> Any Row </button></p>
+
+    <input id="row" name="row"  />
+
+    <p> Bay </p>
+    <p id="b"> </p>
+    <!-- <p><button id="currentLocationT" onclick="geoFindMe()"> Current location</button></p>
+    <p><button id="inputRow" onclick="geoFindMe()"> Any Row </button></p> -->
+
+    <input id="bay" name="bay"  />
+
+
+
+<input type="submit" value="ADD" class="btn-yellow" />
+
+  </form>
+
+
+
+
+
+
+</div>
+
+
+
+<div class="form" >
+
+  <form action="/addGrowth" method="post" id="G">
+    <img id="backBTN2" src="static/images/back.png" width="30px">
+
+    <h3> Growth </h3>
+    <p> Date </p>
+    <input  id="date" name="dayG" required />
+    <input  id="date" name="monthG" required />
+    <input  id="date" name="yearG" required />
+
+
+
+
+
+
+    <p> Vineyard </p>
+    <input id="Vineyard" name="VineyardG" required />
+
+    <p> Block </p>
+    <input id="block" name="blockG" required />
+
+    <p> Measurement </p>
+    <input id="amount" name="amountG" required />
+
+    <p> Row </p>
+    <input id="row" name="rowG" required />
+
+    <p> Bay </p>
+    <input id="bay" name="bayG" required />
+
+
+
+<input type="submit" value="ADDG" class="btn-yellow" />
+
+  </form>
+
+</div>
+
+
+
+
+
+
+
+<div class="form" >
+
+  <form action="/ADDd" method="post" id="D">
+    <img id="backBTN3" src="static/images/back.png" width="30px">
+
+    <h3> Disease </h3>
+    <p> Date </p>
+    <input  id="date" name="dayD" required />
+    <input  id="date" name="monthD" required />
+    <input  id="date" name="yearD" required />
+
+
+
+
+    <p> Vineyard </p>
+    <input id="Vineyard" name="VineyardD" required />
+
+    <p> Block </p>
+    <input id="block" name="blockD" required />
+
+    <p> Type </p>
+    <input id="Type" name="typeD" required />
+
+    <p> Measurement </p>
+    <input id="amount" name="amountD" required />
+
+    <p> Row </p>
+    <input id="row" name="rowD" required />
+
+    <p> Bay </p>
+    <input id="bay" name="bayD" required />
+
+
+
+<input type="submit" value="ADDd" class="btn-yellow" />
+
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form" >
+
+  <form action="/addS" method="post" id="S">
+    <img id="backBTN4" src="static/images/back.png" width="30px">
+
+    <h3> Spray </h3>
+    <p> Date </p>
+    <input type="text" id="date" name="dayS" required />
+    <input type="text" id="date" name="monthS" required />
+    <input type="text" id="date" name="yearS" required />
+
+
+    <p> Vineyard </p>
+    <input id="Vineyard" name="VineyardS" required />
+
+    <p> Block </p>
+    <input id="block" name="blockS" required />
+
+
+    <p> Row </p>
+    <input id="row" name="rowS" required />
+
+
+
+
+
+<input type="submit" value="ADDS" class="btn-yellow" />
+
+  </form>
+
+</div>
+
+
+
+
+
+<div class="form" >
+
+  <form action="/addP" method="post" id="P">
+    <img id="backBTN5" src="static/images/back.png" width="30px">
+
+    <h3> Broken Posts </h3>
+    <p> Date </p>
+    <input type="text" id="date" name="dateP" required />
+
+    <p> Vineyard </p>
+    <input id="Vineyard" name="VineyardP" required />
+
+    <p> Block </p>
+    <input id="block" name="blockP" required />
+
+
+    <p> Row </p>
+    <input id="row" name="rowP" required />
+
+    <p> Bay </p>
+    <input id="row" name="bayP" required />
+
+    <p> broken </p>
+    <input id="row" name="brokenP" required />
+
+
+
+
+<input type="submit" value="addP" class="btn-yellow" />
+
+  </form>
+
+</div>
+
+
+
+
+
+
+
+  <script>
+
+
+      </script>
+<script src="static/scripts/Lana.js"></script>
+<script src="static/scripts/mapScript.js"></script>
+<!-- <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyPJdAO0uERZvhnW-QEuQ7pOTA6HaouHA&callback=initMap">
+</script> -->
+
+<!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=&libraries=visualization&callback=initMap">
+    </script> -->
+
+    <script async defer
+           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyPJdAO0uERZvhnW-QEuQ7pOTA6HaouHA&libraries=visualization&callback=initMap">
+       </script>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+<div class="Sq(200px) Bgz(cv) Bgp(c) Bdrs(8px)" style="background-image: url(https://scontent.cdninstagram.com/vp/f46dec648eec28737da240109a1e2f1b/5CCBDE54/t51.2885-15/sh0.08/e35/p640x640/47191943_293998547971932_208966806982289002_n.jpg?_nc_ht=scontent.cdninstagram.com); background-size: auto 100%; background-position: 50% 50%;"></div>
